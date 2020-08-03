@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styleCalc.css">
+    <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <header>
+        <h2 style="margin-left: 2rem;">Hey, you Welcome</h2>
+        <button class="btn" id="start">Start</button>
+    </header>
+    <div class="section_home">
+        <h1>Calculer le budget</h1>
+    </div>
+    <div class="all_section_input">
+        <h2>Sold & salaire & Frais</h2>
+        <div class="row">
+            <div class="salaire sold">
+                <div class="img_salaire">
+                    <img src="img/5.jpg" alt="img not found" draggable="false">
+                </div>
+                <div class="salaire_input">
+                    <div class="label_salaire"><label for="sold">sold Active</label></div>
+                    <div class="input_salaire"><input type="number" min="0" name="sold" id="sold"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="salaire">
+                <div class="img_salaire">
+                    <img src="img/2.png" alt="img not found" draggable="false">
+                </div>
+                <div class="salaire_input">
+                    <div class="label_salaire"><label for="salaire">salaire</label></div>
+                    <div class="input_salaire"><input type="number" min="0" name="salaire" id="salaire"></div>
+                </div>
+            </div>
+            <div class="frais">
+                <div class="frais_input">
+                    <div class="frais_img center">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="frais_name center">
+                        <label for="appartement">Appartement</label>
+                    </div>
+                    <div class="frais_input2 center">
+                        <input type="number" min="0" name="Appartement" id="appartement">
+                    </div>
+                </div>
+                <div class="frais_input">
+                    <div class="frais_img center">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="frais_name center">
+                        <label for="transport">Transport</label>
+                    </div>
+                    <div class="frais_input2 center">
+                        <input type="number" min="0" name="transport" id="transport">
+                    </div>
+                </div>
+                <div class="frais_input">
+                    <div class="frais_img center">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="frais_name center">
+                        <label for="lydec">L'eau & Electricité</label>
+                    </div>
+                    <div class="frais_input2 center">
+                        <input type="number" min="0" name="lydec" id="lydec">
+                    </div>
+                </div>
+                <div class="frais_input">
+                    <div class="frais_img center">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="frais_name center">
+                        <label for="internet">Internet</label>
+                    </div>
+                    <div class="frais_input2 center">
+                        <input type="number" min="0" name="internet" id="internet">
+                    </div>
+                </div>
+                <div class="frais_input">
+                    <div class="frais_img center">
+                        <i class="fas fa-money-check"></i>
+                    </div>
+                    <div class="frais_name center">
+                        <label for="frais">Frais</label>
+                    </div>
+                    <div class="frais_input2 center">
+                        <input type="number" min="0" name="frais" id="frais">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>But & time</h2>
+        <div class="section_but">
+            <div class="row">
+                <div class="but">
+                    <div class="frais_input">
+                        <div class="frais_img center">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="frais_name center">
+                            <label for="appartement2">prix de l'Appartement</label>
+                        </div>
+                        <div class="frais_input2 center">
+                            <input type="number" min="0" name="Appartement" id="appartement2">
+                        </div>
+                    </div>
+                    <div class="frais_input">
+                        <div class="frais_img center">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="frais_name center">
+                            <label for="car">prix de voiture</label>
+                        </div>
+                        <div class="frais_input2 center">
+                            <input type="number" min="0" name="car" id="car">
+                        </div>
+                    </div>
+                    <div class="frais_input">
+                        <div class="frais_img center">
+                            <i class="fas fa-money-check"></i>
+                        </div>
+                        <div class="frais_name center">
+                            <label for="save_money">save money</label>
+                        </div>
+                        <div class="frais_input2 center">
+                            <input type="number" min="0" name="Appartement" id="save_money">
+                        </div>
+                    </div>
+                </div>
+                <div class="salaire">
+                    <div class="img_salaire">
+                        <img src="img/3.jpg" alt="img not found" draggable="false">
+                    </div>
+                    <div class="salaire_input">
+                        <div class="label_salaire"><label for="time">Time for buts(Anneé)</label></div>
+                        <div class="input_salaire"><input type="number" min="0" name="time" id="time"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn_calc"><button id="calc">Calculer</button></div>
+    </div>
+    <div class="All_output" id="all_out">
+        <div class="row">
+            <div class="all_frais">
+                <div class="salaire_output">
+                    <div id="sold_out"></div>
+                    <div id="salaire_out"></div>
+                </div>
+                <div class="all_frais_output">
+                    <div id="appartement_out"></div>
+                    <div id="transport_out"></div>
+                    <div id="lydec_out"></div>
+                    <div id="internet_out"></div>
+                    <div id="frais_out"></div>
+                </div>
+                <div class="but_output">
+                    <div id="total_frais_output"></div>
+                    <div id="somme_save_output"></div>
+                </div>
+            </div>
+            <div class="total_frais">
+                <div id="appartement_but_out"></div>
+                <div id="car_but_out"></div>
+                <div id="save_but_out"></div>
+                <div id="total_but_output"></div>
+                <div id="time_but_out"></div>
+            </div>
+            <div class="calc_but">
+                <div class="verification">
+                    <div id="possibiliter">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="details">
+                <div id="salaire_year"></div>
+                <div id="montantSavePerYear"></div>
+                <div id="sold2"></div>
+                <div id="salaire_time"></div>
+                <div id="montantafterbutAndSold"></div>
+                <div id="montantafterbut"></div>
+                <div id="temps_neccesaire">
+                    <i></i>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Tout Droits Réservé par Ayoub Eddarraz&copy; 2020
+    </footer>
+
+    <!-- parte Alert Et Affiche Et Explication onlad page -->
+
+    <!-- Sound Effect Message -->
+
+    <audio src="sound1.mp3" id="audio1"></audio>
+
+    <!-- End Sound Effect Message -->
+
+    <!-- Loading page-->
+
+    <div id="loadingPageDiv">
+        <i class="fas fa-spinner icone-loding"></i>
+    </div>
+
+    <!-- End Loading page-->
+
+    <!-- Overly -->
+    <div id="overly"></div>
+    <!-- End Overly -->
+
+    <!-- Settings box -->
+
+    <div id="settingsBox" class="settingsBoxClass">
+        <div class="spin-icone" id="icone-settings-box"><i class="fas fa-cog" id="icone-spine"></i></div>
+        <div class="settingsBoxContent">
+            <div class="changeColor div-change">
+                <h3 class="title-settings">Change Color</h3>
+                <div id="black-color"></div>
+                <div id="white-color"></div>
+                <div id="grey-color"></div>
+            </div>
+            <div class="blockNotif div-change">
+                <h3 class="title-settings">Documentation</h3>
+                <button class="btnBlcok" id="activeNotif">activer</button>
+                <button class="btnBlcok" id="blockNotif">Desactivé</button>
+            </div>
+            <div style="position: absolute; bottom: 0; margin-bottom: 2rem; text-align: center; width: 100%;">Created by Me&copy;</div>
+        </div>
+    </div>
+
+    <!-- End Settings box -->
+
+    <!-- Input Empty -->
+
+    <div id="inputEmpty" class="inputEmptyClass">
+        <div class="div-icone-close" id="close"><i class="fas fa-times icone-close"></i></div>
+        <div class="div-icone-error"><i class="fas fa-exclamation-triangle icone-error"></i></div>
+        <div class="div-title-error"><h3 class="title-error">Input Empty</h3></div>
+        <div class="div-desc-error"><p class="desc-error">Une contribution vide , essayer de Entreé des valeur dans tout les input , et 0 dans les contributions pas important ou bien pas de besoin pour vous</p></div>
+    </div>
+
+    <!-- End Input Empty -->
+    
+    <!-- Salaire failde -->
+
+    <div id="salaireFailed" class="inputEmptyClass">
+        <div class="div-icone-close" id="close2"><i class="fas fa-times icone-close"></i></div>
+        <div class="div-icone-error"><i class="fas fa-exclamation icone-error"></i></div>
+        <div class="div-title-error"><h3 class="title-error">Salaire Faible</h3></div>
+        <div class="div-desc-error"><p class="desc-error">Salaire inférieure de total frais , Essayer de minimiser les frais!</p></div>
+    </div>
+
+    <!-- End Salaire failde -->
+
+
+    <!-- Section Explication -->
+
+    <!-- Section Alert active & block notification -->
+
+    <div id="alertActiveBlockNotif" class="alertActiveBlock">
+        <div id="messageAlertActiveBlockNotif" class="messgaeAlertActiveBlock"></div>
+        <div class="divIconeCloseActiveBlock"><i class="fas fa-times" id="iconeAlertCloseActiveBlockNotif"></i></div>
+    </div>
+
+    <!-- End Section Alert active & block notification -->
+
+    <div id="all-alert">
+        <div id="alertSold" class="alertSoldClass">
+            <div class="div-descAlert"><p class="descAlert">Entrer le sold l'argent qui save maintenant , combien d'argent Collecter pour Linstant.</p></div>
+            <div class="div-buttonOk"><button id="buttonOksold" class="buttonOk">Ok</button></div>
+        </div>  <!-- End Alert sold -->
+    
+        <div id="alertSalaire" class="alertSoldClass">
+            <div class="div-descAlert"><p class="descAlert">Entrer Le Salaire Actuele de votre Métier.</p></div>
+            <div class="div-buttonOk"><button id="buttonOksalaire" class="buttonOk">Ok</button></div>
+        </div> <!-- End Alert salaire-->
+    
+        <div id="alertAppartement" class="alertSoldClass">
+            <div class="div-descAlert"><p class="descAlert">Les frais d'appartement . loyer ou Autre.</p></div>
+            <div class="div-buttonOk"><button id="buttonOkAppartement" class="buttonOk">Ok</button></div>
+        </div> <!-- End Aler appartement -->
+    
+        <div id="alertTransport" class="alertSoldClass">
+            <div class="div-descAlert"><p class="descAlert">Les frais de transport . frais de voiture ou bien de transport.</p></div>
+            <div class="div-buttonOk"><button id="buttonOktransport" class="buttonOk">Ok</button></div>
+        </div> <!-- End Alert transport -->
+    
+        <div id="alertLydec" class="alertSoldClass">
+            <div class="div-descAlert"><p class="descAlert">les frais de l'eau et Electricité.</p></div>
+            <div class="div-buttonOk"><button id="buttonOklydec" class="buttonOk">Ok</button></div>
+        </div> <!-- End Alert lydec -->
+    
+        <div id="alertInternet" class="alertSoldClass">
+            <div class="div-descAlert"><p class="descAlert">les frais de Connexion . abonnement ou Adsl.</p></div>
+            <div class="div-buttonOk"><button id="buttonOkinternet" class="buttonOk">Ok</button></div>
+        </div> <!-- End Alert internet -->
+    
+        <div id="alertFrais" class="alertSoldClass">
+            <div class="div-descAlert"><p class="descAlert">Les frais comme les Besoins quotidiens . et Autre bosoins.</p></div>
+            <div class="div-buttonOk"><button id="buttonOkfrais" class="buttonOk">Ok</button></div>
+        </div> <!-- End Alert frais -->
+    
+        <div id="alertAppartement2" class="alertSoldClass">
+            <div class="div-descAlert"><p class="descAlert">Entrer le prix d'appartement qui tu veux Acheter comme but.</p></div>
+            <div class="div-buttonOk"><button id="buttonOkappartement2" class="buttonOk">Ok</button></div>
+        </div> <!-- End Alert appartement2 -->
+    
+        <div id="alertCar" class="alertSoldClass">
+            <div class="div-descAlert"><p class="descAlert">Entrer le prix de voiture qui tu veux Acheter comme but</p></div>
+            <div class="div-buttonOk"><button id="buttonOkcar" class="buttonOk">Ok</button></div>
+        </div> <!-- End Alert car -->
+    
+        <div id="alertSaveMoney" class="alertSoldClass">
+            <div class="div-descAlert"><p class="descAlert">Entrer Comme Bien d'argent qui tu veux Collecter comme but.</p></div>
+            <div class="div-buttonOk"><button id="buttonOksavemoney" class="buttonOk">Ok</button></div>
+        </div> <!-- End Alert save money -->
+    
+        <div id="alertTime" class="alertSoldClass">
+            <div class="div-descAlert"><p class="descAlert">Enter le temps pour atteindre les objectifs(but).</p></div>
+            <div class="div-buttonOk"><button id="buttonOktime" class="buttonOk">Ok</button></div>
+        </div> <!-- End Alert time -->
+    </div>
+
+    <!-- End Section Explication -->
+
+    <!-- End parte Alert Et Affiche Et Explication -->
+    <script src="js/scriptCalc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+</body>
+</html>
